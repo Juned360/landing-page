@@ -36,7 +36,7 @@ main{
 .player{
     display: flex;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
 }
 .player img{
     width: 56px;
@@ -88,7 +88,7 @@ article{
     display: flex;
     flex-direction: column;
     Width:224px;
-    Height:269.79px;
+    /* Height:269.79px; */
     border-radius: 20px;
     box-shadow: 0px 5.34229px 13.3557px rgba(0, 0, 0, 0.05);
     padding: 20px;
@@ -143,18 +143,45 @@ article{
     .players {
         grid-template-columns: repeat(2, 1fr);
      }
-     .player, .blog{
+     .player{
          flex-direction: column;
+     }
+     .blogs{
+        /* width: 250px; */
+        /* flex-direction: column; */
+        border-radius: 20px;
+        box-shadow: 0px 5.34229px 13.3557px rgba(0, 0, 0, 0.05);
+        /* padding: 20px; */
      }
      .section-tittle{
          margin-left: 20px;
      }
      article{
         grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
      }
      .courses{
         flex-wrap: wrap;
         justify-content: center;
      }
-  
  }
+/* tablet devices */
+@media only screen and (min-width: 689px) and (
+    max-width: 992px) {
+        .container{
+            width: 100%;
+        }
+        .courses{
+            flex-wrap: wrap;
+            justify-content: center;
+        
+        }
+        .section-tittle{
+            text-align: center;
+        }
+        article{
+            grid-template-columns: repeat(1, 1fr);
+            align-items: center;
+         }
+    
+}
